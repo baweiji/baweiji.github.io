@@ -5,7 +5,6 @@ body{font-family: arial;}
 	border: 1px solid #ccc;
 	width: 100px;
 	margin: 5px;
-	padding: 5px 0;
 	text-align: center;
 	color:#444;
 }
@@ -17,3 +16,5 @@ body{font-family: arial;}
 .history-item{ padding: 5px; border-bottom: 1px solid #ddd}
 .hascount{ background: #3385ff; color:#fff;}
 .haspopup{background: #60b044; color:#fff;}
+.item-value{ width:60px; display: inline-block; padding: 5px}
+.item-count{width: 19px;display: inline-block;padding: 5px;border-left: 1px solid #ccc;}

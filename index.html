@@ -24,8 +24,7 @@
 		<div id="analysis-container">
 			<div class="title">结果</div>
 			<div ms-repeat="dataSource" class="item" ms-class-hascount="el.count>0 && el.count<5" ms-class-haspopup="el.count>=5" >
-				<div>{{el.item}}</div>
-				<div>{{el.count}}</div>
+				<span class="item-value">{{el.item}}</span><span class="item-count">{{el.count}}</span>
 			</div>
 		</div>
 	</div>
