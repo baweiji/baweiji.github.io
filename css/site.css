@@ -1,0 +1,18 @@
+body{font-family: arial;}
+.item
+{
+	float: left;
+	border: 1px solid #ccc;
+	width: 100px;
+	margin: 5px;
+	padding: 5px 0;
+	text-align: center;
+	color:#444;
+}
+#analysis{position:relative; padding: 5px 0 0 0}
+#input-history{ position: absolute;width: 100px; height: 300px; }
+#input-history-container{border:1px solid #ccc; height: 300px; overflow-y:auto;margin: 5px 0}
+#analysis-container{ float:left;margin-left:110px;}
+.title{padding: 5px}
+.history-item{ padding: 5px; border-bottom: 1px solid #ddd}
+.hascount{ background: #3385ff; color:#fff;}
