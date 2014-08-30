@@ -43,6 +43,9 @@ avalon.define("app",function(vm){
 	vm.show=function(index){
 		vm.selectedTab=index;
 	}
+	vm.clearHistory=function(){
+		vm.historyInputs=[];
+	}
 });
 
 avalon.scan();
