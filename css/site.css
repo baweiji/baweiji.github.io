@@ -1,4 +1,5 @@
 body{font-family: arial;}
+ul,li{list-style: none; padding: 0 ;margin: 0}
 .item
 {
 	float: left;
@@ -9,12 +10,15 @@ body{font-family: arial;}
 	color:#444;
 }
 #analysis{position:relative; padding: 5px 0 0 0}
-#input-history{ position: absolute;width: 100px; height: 300px; }
-#input-history-container{border:1px solid #ccc; height: 300px; overflow-y:auto;margin: 5px 0}
-#analysis-container{ float:left;margin-left:110px;}
+#input-history{ position: absolute;width: 100px; height: 500px; }
+#input-history-container{border:1px solid #ccc; height: 500px; overflow-y:auto;margin: 5px 0}
+#analysis-container{ float:left;margin-left:120px;}
 .title{padding: 5px}
 .history-item{ padding: 5px; border-bottom: 1px solid #ddd}
 .hascount{ background: #3385ff; color:#fff;}
 .haspopup{background: #60b044; color:#fff;}
 .item-value{ width:60px; display: inline-block; padding: 5px}
 .item-count{width: 19px;display: inline-block;padding: 5px;border-left: 1px solid #ccc;}
+#analysis-tabs{display: inline-block;}
+#analysis-tabs li{float:left; padding: 5px 10px;  margin:0 5px 0 0 ; color:#3385ff; cursor: pointer;}
+#analysis-tabs li.selected{background: #44c5ff; color:#fff;}

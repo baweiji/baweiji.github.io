@@ -1,8 +1,11 @@
 avalon.define("app",function(vm){
+	vm.maxCount=5;
 	vm.dataSource=[];
 	vm.historyInputs=[];
+	vm.matchItems=[];
 	vm.summary="";
 	vm.inputNum="";
+	vm.selectedTab=0;
 	vm.init=function(){
 		vm.dataSource= generateDataSource();
 	}
@@ -17,7 +20,7 @@ avalon.define("app",function(vm){
 	vm.analysisResult=function(){
 		if(vm.inputNum=="") return;
 		var inputNum= unique(vm.inputNum.split(""));
-		
+		vm.matchItems=[];
 		for(var i=0;i< vm.dataSource.length;i++){
 			var matchCount=0;
 			for(var j=0;j<inputNum.length;j++){
@@ -30,9 +33,15 @@ avalon.define("app",function(vm){
 			if(matchCount>1){
 				vm.dataSource[i].count=0
 			}
+			if(vm.dataSource[i].count>=5){
+				vm.matchItems.push(vm.dataSource[i]);
+			}
 		}
 		vm.historyInputs.push(vm.inputNum);
 		vm.inputNum="";
+	}
+	vm.show=function(index){
+		vm.selectedTab=index;
 	}
 });
 

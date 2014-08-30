@@ -9,9 +9,14 @@
 <body>
 
 <div ms-controller="app">
+	<div class="popup-setting">
+		
+	</div>
 	<div class="input-number">
 		<span>输入</span>
 		<input id="numInput" ms-duplex="inputNum" ms-on-keyup="inputCheck"></input>
+		<span>满足计数</span>
+		<input style="width:50px" ms-duplex="maxCount"></input>
 		<button ms-click="analysisResult">分析</button>
 	</div>
 	<div id="analysis">
@@ -22,10 +27,23 @@
 			</div>
 		</div>
 		<div id="analysis-container">
-			<div class="title">结果</div>
-			<div ms-repeat="dataSource" class="item" ms-class-hascount="el.count>0 && el.count<5" ms-class-haspopup="el.count>=5" >
-				<span class="item-value">{{el.item}}</span><span class="item-count">{{el.count}}</span>
+			<div class="title">
+				<ul id="analysis-tabs">
+					<li ms-class-selected="selectedTab==0" ms-click="show(0)">结果</li>
+					<li ms-class-selected="selectedTab==1" ms-click="show(1)">满足计数 ({{matchItems.length}})</li>
+				</ul>
 			</div>
+			<div ms-if="selectedTab==0">
+				<div ms-repeat="dataSource" class="item" ms-class-hascount="el.count>0 && el.count<maxCount" ms-class-haspopup="el.count>=maxCount" >
+								<span class="item-value">{{el.item}}</span><span class="item-count">{{el.count}}</span>
+				</div>
+			</div>
+			<div ms-if="selectedTab==1">
+				<div  ms-repeat="matchItems" class="item">
+					<span class="item-value">{{el.item}}</span><span class="item-count">{{el.count}}</span>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </div>
