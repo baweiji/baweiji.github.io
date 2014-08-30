@@ -23,7 +23,10 @@
 		<div id="input-history">
 			<div class="title">历史输入</div>
 			<div id="input-history-container">
-				<div ms-repeat="historyInputs" class="history-item">{{el}}</div>
+				<div ms-repeat="historyInputs" class="history-item">
+					<span>{{el}}</span>
+					<button class="delete" ms-click="$remove">删除</button>
+				</div>
 			</div>
 		</div>
 		<div id="analysis-container">

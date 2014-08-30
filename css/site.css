@@ -14,7 +14,7 @@ ul,li{list-style: none; padding: 0 ;margin: 0}
 #input-history-container{border:1px solid #ccc; height: 500px; overflow-y:auto;margin: 5px 0}
 #analysis-container{ float:left;margin-left:120px;}
 .title{padding: 5px}
-.history-item{ padding: 5px; border-bottom: 1px solid #ddd}
+.history-item{ padding: 5px; border-bottom: 1px solid #ddd; position: relative;}
 .hascount{ background: #3385ff; color:#fff;}
 .haspopup{background: #60b044; color:#fff;}
 .item-value{ width:60px; display: inline-block; padding: 5px}
@@ -22,3 +22,4 @@ ul,li{list-style: none; padding: 0 ;margin: 0}
 #analysis-tabs{display: inline-block;}
 #analysis-tabs li{float:left; padding: 5px 10px;  margin:0 5px 0 0 ; color:#3385ff; cursor: pointer;}
 #analysis-tabs li.selected{background: #44c5ff; color:#fff;}
+.delete{ position:absolute;right: 4px;top: 1px;}
