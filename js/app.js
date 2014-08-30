@@ -15,6 +15,7 @@ avalon.define("app",function(vm){
 		}
 	}
 	vm.analysisResult=function(){
+		if(vm.inputNum=="") return;
 		var inputNum= unique(vm.inputNum.split(""));
 		
 		for(var i=0;i< vm.dataSource.length;i++){
